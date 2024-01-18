@@ -33,3 +33,5 @@ functions.py
 	inserts the tweet to the database, set the date filed to the system date 
 and username to "291user". All other fields will be null.
 
+We can use the 100.json file as out database to test this code out.
+
