@@ -1,0 +1,35 @@
+3 Files:
+- load-json.py 
+- functions.py
+- main.py
+
+load-json: 
+- Command line : json file name, port number
+- Creates a database named 291db (if it does not exit)
+- Creates collection 'tweets' (if collections already exists, drop it and create
+	a new one)
+- End program after that
+- Note: Data should be inserted in small batches (say 1k-10k tweets per batch) 
+	using insertMany command in MongoDB. The input file is expected to be 
+	too large to fit in memory. You may also use Mongoimport (if available 
+	on lab machines).
+
+functions.py
+- search_tweets(keywords: tuple, db: str)
+	returns tweets matching keywords
+
+- search_tweets(keyword: str, collection: str)
+	returns users that match with their displayname or location, no duplicates
+
+- top_tweets(n: int, count: str, db: str)
+	n: num of tweets to return
+	count: Which count they want (retweetCount, likeCount, quoteCount)
+	return result, will be ordered in a descending order
+
+- top_users(n: int, db: str)
+	returns top n users based on followers
+
+- compose_tweet(text, db: str)
+	inserts the tweet to the database, set the date filed to the system date 
+and username to "291user". All other fields will be null.
+
